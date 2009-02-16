@@ -13,7 +13,7 @@ Accessible Forms Plugin for Rails
           = f.multiple_select_edit_from_collection :publication, :categories, options_from_collection_for_select(@categories, :id, :name, @publication.categories.collect(&:id))
           = f.text_area :description
           = f.file_field :logo
-          = f.submit "Update"f
+          = f.submit "Update"
 = Description
 Extend ActionView form_for to produce accessible, semantic, valid XHTML forms with minimal markup.
 
