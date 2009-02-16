@@ -1,0 +1,40 @@
+:title:Accessible Forms Plugin for Rails
+= Name
+Accessible Forms Plugin for Rails
+= Synopsis
+    - custom_form_for(@publication, :html => {:multipart => true}) do |f|
+      %fieldset
+        %legend Editing publication
+        %ul
+          = f.text_field :name
+          = f.publishers_select_from_collection :publisher_id, @publishers
+          = f.date_select :date_activated, :disabled => true
+          = f.select_from_array :status, @statuses
+          = f.multiple_select_edit_from_collection :publication, :categories, options_from_collection_for_select(@categories, :id, :name, @publication.categories.collect(&:id))
+          = f.text_area :description
+          = f.file_field :logo
+          = f.submit "Update"f
+= Description
+Extend ActionView form_for to produce accessible, semantic, valid XHTML forms with minimal markup.
+
+With this plugin installed, form_for will now automatically create label elements for fields.
+Additionally, fields, labels and submit buttons will automatically be wrapped LI tags.
+See <http://onrails.org/articles/2008/06/13/advanced-rails-studio-custom-form-builder>
+
+== How To Install
+To build and install, use
+   XXXXXXXXXXXXXXXXXXXXXXX
+
+=== Dependencies
+    XXXXXXXXXXXXXXXXXXXXXX
+
+= Todo
+== Upcoming Features
+0.
+= References
+0. {}[http://]
+
+= License
+This code is provided under the terms of the {MIT License.}[http://www.opensource.org/licenses/mit-license.php]
+= Authors
+Noah Sussman and Mark Coates
